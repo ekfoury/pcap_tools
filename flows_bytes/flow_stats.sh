@@ -31,3 +31,4 @@ head -n -1 "$output_file" > temp_file && mv temp_file "$output_file"
 
 # Process the cleaned output_file using the Python script
 python3 processor.py "$output_file" "$final_output_file"
+rm $output_file
