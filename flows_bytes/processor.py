@@ -42,11 +42,11 @@ def process_csv(input_file, output_file):
 
             # Write the first direction
             if(int(num_src_frames) != 0):
-                writer.writerow([src_ip, src_port, dst_ip, dst_port, num_src_frames, num_src_bytes, relative_start, duration])
+                writer.writerow([dst_ip, dst_port, src_ip, src_port, num_src_frames, num_src_bytes, relative_start, duration])
 
             # Write the reverse direction
             if(int(num_dst_frames) != 0):
-                writer.writerow([dst_ip, dst_port, src_ip, src_port, num_dst_frames, num_dst_bytes, relative_start, duration])
+                writer.writerow([src_ip, src_port, dst_ip, dst_port, num_dst_frames, num_dst_bytes, relative_start, duration])
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
